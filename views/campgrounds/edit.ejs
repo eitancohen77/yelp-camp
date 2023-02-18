@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+    <h2 class= "text-center">Edit <%=campground.title%>'s title and information</h1>
+    <div class="col-6 offset-3">
+        <form method="POST" action="/campgrounds/<%=campground.id%>?_method=PATCH" >
+            <div class="mb-3">
+                <label class="form-label" for="title">Edit Title</label>
+                <input class="form-control" type="fo" id="title" name="campground[title]" value="<%=campground.title%>" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-label">Edit Location</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" value="<%=campground.location%>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-label">Edit Picture URL</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" value="<%=campground.image%>">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-label">Edit Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">$</span>
+                    <input type="text" class="form-control" id="price" aria-describedby="basic-addon1" name="campground[price]" value="<%=campground.price%>">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="form-label">Edit Description</label>
+                <input class="form-control" type="text" id="description" name="campground[description]" value="<%=campground.description%>">
+            </div>
+        
+            <button class="btn btn-success">Update Campground</button>
+        </form>
+    </div>
+    
+

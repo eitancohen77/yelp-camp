@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <!-- This centers everything because there is 12 units and we occupy the middle 6 with the offset being 3 on each side:___------___ - This is what it looks like in our version. col-3 offset 3: ___---______ -->
+    <div class="col-6 offset-3"> 
+        <form action="/campgrounds" method="POST">
+            <div class="container-sm">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="fo" id="title" name="campground[title]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="form-label">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="form-label" width:>Picture URL</label>
+                    <input class="form-control" type="text" id="image" name="campground[image]">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="form-label">Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">$</span>
+                        <input type="text" class="form-control" id="price" aria-describedby="basic-addon1" name="campground[price]">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="form-label">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]"></textarea>
+                </div>
+                <button class="btn btn-success">Add Campground</button>
+            </div>
+        </form>
+    </div>  
+</div>
